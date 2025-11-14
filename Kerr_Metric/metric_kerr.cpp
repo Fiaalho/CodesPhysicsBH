@@ -8,13 +8,13 @@ class KerrMetric {
   private:
     double M;
     double a;
-    double r;//raio do horizonte
+    double r;//radius of the horizon
     
   public:
-    KerrMetric(double mass, double spin): M(mass), a(spin), r(mass + sqrt(mass*mass - spin*spin)) {}//construtor
+    KerrMetric(double mass, double spin): M(mass), a(spin), r(mass + sqrt(mass*mass - spin*spin)) {}//constructor
 
 
-    //valor de sigma
+    //sigma value
     double sigma(double r, double theta) {
         return r*r + a*a * cos(theta)*cos(theta);
     }
@@ -50,7 +50,7 @@ class KerrMetric {
         return (sin(theta)*sin(theta)) * (r*r + a*a)*(r*r + a*a)-a*a*del*sin(theta)*sin(theta)/sig;
     }
 
-    //gerar arquivo com os dados das componentes da métrica
+    // Generate metric data and write to file
     void generateMetricData(const string& filename){
       ofstream file(filename);
 
@@ -76,5 +76,5 @@ int main(){
   k.generateMetricData("kerr_metric.dat");
 
   KerrMetric k2(2.0, 1.0);
-  k2.generateMetricData("kerr_metric_2.dat");
+  k2.generateMetricData("kerr_metric2.dat");
 }
