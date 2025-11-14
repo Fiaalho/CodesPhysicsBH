@@ -1,0 +1,1 @@
+Aqui crio alguns códigos em C++ para o cálculo de métricas de buracos negros como o de Schwarzschild, Kerr e Reissner-Nordstrom. No código existem 2 objetos para servir de comparação entre diferentes valores ambos gerando 2 arquivos .dat.
